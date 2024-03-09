@@ -243,13 +243,14 @@ function ImageDisplay({ image = null, className }) {
   return (
     <div
       className={
-        className + " flex flex-col justify-center p-5 bg-gray-100 text-center"
+        className +
+        " flex flex-col justify-center p-5 bg-gray-100 text-center overflow-y-auto"
       }
     >
       {image ? (
-        <div className="w-full h-full justify-center items-center flex">
-          <div className="w-full relative">
-            <img ref={canvasRef} src={"data:image/png;base64," + image} />
+        <div className="w-full h-full justify-center items-center flex ">
+          <div className="w-full relative ">
+            <img className="" src={"data:image/png;base64," + image} />
             <canvas
               ref={canvasRef}
               className="absolute w-full h-full top-0 bottom-0 "
